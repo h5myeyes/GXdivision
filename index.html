@@ -59,7 +59,7 @@
 <!-- <script src="/wap/resource/migu/subject/js/jQuery-3.1.1.min.js"></script>
 <script src="js/plugins/vue.js"></script> -->
 <script type="text/javascript" src="./js/jquery-3.3.1.min.js"></script>
-<!-- <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script> -->
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
 
 <script>
     //声明_czc对象:
@@ -77,19 +77,11 @@
     // console.info(iframeH+44)
     $('iframe').height(iframeH);
 
-    var navbars = ['推荐', '天盛长歌', '精选视频', '一天一片', '权益特惠'];
-    var data = '';
-    var wrapperI = 0;
-    $.each(navbars, function(index, val) {
-        data += '<li @click="tabChange(index)"  class="[{active: index === wrapperI}]">\
-                        <a >' + val + '</a>\
-                </li>'
-    })
-    $("ul").html(data);
+
 
 
 </script>
-<!-- <script type="text/javascript">
+<script type="text/javascript">
 	var vueObj = function () {
         var prefecture = new Vue({
             el: "#GXdivision",
@@ -166,5 +158,5 @@
         })
 	}
 	vueObj ()
-</script> -->
+</script>
 </html>
