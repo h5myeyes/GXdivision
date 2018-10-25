@@ -70,6 +70,11 @@
         window.onload = function(){
         _czc.push(['_trackEvent', '广西视频专区', '页面刷新']);
     }
+    // 获取浏览器高度
+                iframeW = $(document).width();
+                iframeH = $(document).height() - 44;
+                console.info(iframeH+44)
+                $('iframe').height(iframeH);
 </script>
 <script type="text/javascript">
 	var vueObj = function () {
@@ -142,11 +147,7 @@
             },
             mounted: function () {     
                 this.getWH();
-                // 获取浏览器高度
-                iframeW = $(document).width();
-                iframeH = $(document).height() - 44;
-                console.info(iframeH+44)
-                $('iframe').height(iframeH);
+
 
             } 
         })
