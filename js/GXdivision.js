@@ -5,10 +5,10 @@ $(function() {
         var app = new Vue({
             el: "#GXdivision",
             data: {
-                navbars: ['推荐', '天盛长歌', '精选视频', '一天一片', '权益特惠'],
+                navbars: ['推荐', '橙红年代', '精选视频', '一天一片', '权益特惠'],
                 links: [
                     'https://m.miguvideo.com/wap/resource/migu/miguH5/index.jsp?nodeId=70043613',
-                    'https://sphy.gnettechnology.cn/api/iqiyi/pay/index?gtcode=14nmc84k',
+                    'http://sphy.gnettechnology.cn/api/iqiyi/videoactivity/index?gtcode=null5msm1p',
                     'https://m.miguvideo.com/wap/resource/migu/miguH5/index.jsp?nodeId=70032516',
                     'https://m.miguvideo.com/wap/resource/migu/common/freeDayTemplate.jsp?channelid=90010000026'
                 ],
