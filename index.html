@@ -110,11 +110,7 @@
                 equityIsShow: false,
             },
             created: function () {
-                // 获取浏览器高度
-                iframeW = $(document).width();
-                iframeH = $(document).height() - 44;
-                console.info(iframeH+44)
-                $('iframe').height(iframeH);
+                
 
             },
             methods: {
@@ -145,7 +141,12 @@
                 }
             },
             mounted: function () {     
-                this.getWH()
+                this.getWH();
+                // 获取浏览器高度
+                iframeW = $(document).width();
+                iframeH = $(document).height() - 44;
+                console.info(iframeH+44)
+                $('iframe').height(iframeH);
 
             } 
         })
