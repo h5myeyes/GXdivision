@@ -38,10 +38,6 @@ $(function() {
                 wrapperI: 0,
                 equityIsShow: false,
             },
-            created: function () {
-                
-
-            },
             methods: {
                 tabChange: function (index, item) {
                     this.wrapperI = index;
