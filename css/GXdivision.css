@@ -81,7 +81,7 @@ body {
       padding: 0 8px;
 }
 .navbar ul li a {
-      display: block;
+      display: inline-block;
       width: 100%;
       height: 100%;
       line-height: 40px;
