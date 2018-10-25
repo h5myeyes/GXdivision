@@ -1,0 +1,158 @@
+* { 
+      margin: 0; padding: 0;
+      font-size: 16px;
+}
+fieldset,img {
+      border: 0;
+}
+img {
+      display: block
+}
+ul,ol {
+      list-style: none
+}
+input {
+      line-height: normal;
+      outline: 0;
+      font: inherit;
+      margin: 0;
+      border: none;
+}
+html {
+      font-size: 50px;
+}
+body {
+      position: relative;
+      background: #f5f5f5;
+
+}
+/* loading加载页面 */
+.loading {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    background: #fff;
+    z-index: 999;
+}
+.loading img {
+    width: 20%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate3d(-50%,-50%,0);
+    transform: translate3d(-50%,-50%,0);
+}
+
+/*导航*/
+.navbar {
+      height: 44px;
+      width: 100%;
+      display: -moz-box;
+      display: -webkit-box;
+      display: box;
+      background-color: #fff;
+      position: fixed;
+      top: 0;
+      z-index: 99;
+
+}
+
+.navbar div {
+      height: 44px;
+      position: relative;
+      overflow: scroll;
+      -moz-box-flex: 1;
+      -webkit-box-flex: 1;
+}
+.navbar ul{
+      position: relative;
+      white-space: nowrap;
+}
+.navbar ul, .wrapper ul {
+      position: relative;
+      
+      font-size: 0;
+}
+.navbar ul li {
+      display: inline-block;
+      padding: 0 8px;
+}
+.navbar ul li a {
+      display: block;
+      width: 100%;
+      height: 100%;
+      line-height: 40px;
+      font-size: .29rem;
+      text-align: center;
+      color: #333;
+      
+}
+.navbar ul li a img {
+      display: initial;
+      font: inherit;
+      font-size: 100%;
+      vertical-align: baseline;
+      width: 18%;
+}
+.wrapper {
+      margin-top: 44px;
+      width: 100%;
+      height: 100%;
+}
+.wrapperDiv {
+      height: 100%;
+      overflow: hidden;
+      white-space: nowrap;
+}
+.wrapperUl {
+      position: relative;
+      font-size: 0;
+}
+.wrapperLl {
+    width: 96%;
+    padding: 2%;
+}
+.wrapperLl, .equity {
+      display: inline-block;
+}
+
+.wrapper iframe {
+      width: 100%;
+      height: 100%;
+}
+.active {
+      border-bottom: solid 4px #0085d0;
+}
+.active span {
+      color: #0085d0!important;
+}
+.equity {
+      vertical-align: top;
+      padding: 2% 2%;
+}
+.discounts {
+      margin-bottom: 3%;
+      background: white;
+      width: 99%;   
+}
+.discounts img {
+      width: 100%;
+}
+.discounts p {
+      padding: 1%;
+}
+.discounts p span:nth-child(1) {
+      font-size: .26rem;
+}
+.discounts p span:nth-child(2) {
+      float: right;
+      color: #999;
+      font-size: .26rem;
+      line-height: .4rem;
+}
+#cnzz_stat_icon_1274830755 {
+    display:none;
+}

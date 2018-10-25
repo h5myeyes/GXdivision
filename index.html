@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="css/GXdivision.css">
+    <title>广西视频专区</title>
+</head>
+<body>
+    
+	<div class="app" id="GXdivision" >
+      <!--   <div class="loading" v-show="loadingIsShow">
+            <img src="https://h5myeyes.github.io/answer/images/page1/loading.svg">
+        </div> -->
+        <div class="navbar">
+            <div>
+        		<ul> 
+        			<li 
+                        v-for="(item, index) in navbars"
+                        @click="tabChange(index, item)"
+                         :class="[{active: index === wrapperI}]"
+                    >
+                        <a >
+                            {{item}}
+                            <img v-if="item == '权益特惠'" src="img/hot.png">
+                        </a>
+
+                    </li>
+        		</ul>
+                
+            </div>            
+        </div>
+        <div class="wrapper"> 
+            <div class="wrapperDiv">
+                <div class="wrapperUl"> 
+                    <span 
+                        class="wrapperLl" 
+                    >
+                    
+                        <iframe src="http://m.miguvideo.com/wap/resource/migu/miguH5/index.jsp?nodeId=70043613"  frameborder="0" ></iframe>
+                        
+                    </span>
+                    <!-- 权益特惠 -->
+                    <span class="equity" >
+                        <div 
+                            class="discounts"
+                            v-for="(item, index) in discounts" 
+                            :onclick=item.link
+                            @click="equityChange(index, item)"
+                        >
+                            <img :src=item.imgUrl>
+                            <p>
+                                <span>{{item.title}}</span>
+                                <span>{{item.time}}</span>
+                            </p>
+                        </div>
+                    </span>
+                </div>
+                
+            </div>
+        </div>
+    </div>   
+</body>
+<!-- <script src="/wap/resource/migu/subject/js/jQuery-3.1.1.min.js"></script>
+<script src="js/plugins/vue.js"></script> -->
+<script type="text/javascript" src="./js/jquery-3.3.1.min.js"></script>
+<script src="http://m.miguvideo.com/wap/resource/migu/subject/js/plugins/vue.js"></script>
+<script>
+    //声明_czc对象:
+    var _czc = _czc || [];
+    _czc.push(["_setAccount", "1274830755"]);
+
+        var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1274830755'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s13.cnzz.com/z_stat.php%3Fid%3D1274830755%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+
+        window.onload = function(){
+        _czc.push(['_trackEvent', '广西视频专区', '页面刷新']);
+    }
+</script>
+<script type="text/javascript">
+	var vueObj = function () {
+        var prefecture = new Vue({
+            el: "#GXdivision",
+            data: {
+                navbars: ['推荐', '天盛长歌', '精选视频', '一天一片', '权益特惠'],
+                links: [
+                    'http://m.miguvideo.com/wap/resource/migu/miguH5/index.jsp?nodeId=70043613',
+                    'http://sphy.gnettechnology.cn/api/iqiyi/pay/index?gtcode=14nmc84k',
+                    'http://m.miguvideo.com/wap/resource/migu/miguH5/index.jsp?nodeId=70032516',
+                    'http://m.miguvideo.com/wap/resource/migu/common/freeDayTemplate.jsp?channelid=90010000026'
+                ],
+                discounts: [
+                    {
+                        'imgUrl': 'img/GXdivision1.png',
+                        'title': '无门槛领30G',
+                        'time': '201808-201812',
+                        'link': "window.open('http://gx.10086.cn/zt-portal/wap/sprom/0ymgspllb30g/view?productNo=212099531905')"
+                    },
+                    {
+                        'imgUrl': 'img/GXdivision2.png',
+                        'title': '30G大视频流量包',
+                        'time': '201808-201812',
+                        'link': "window.open('http://m.miguvideo.com/wap/resource/migu/subject/get30G.jsp?from=singlemessage&isappinstalled=0')"
+                    },
+                    {
+                        'imgUrl': 'img/GXdivision3.png',
+                        'title': '3个月会员体验',
+                        'time': '201808-201812',
+                        'link': "window.open('http://gx.10086.cn/zt-portal/wap/promoaccept/hywshf3M/view?productNo=196199800481_310010000766_0&from=groupmessage&isappinstalled=0')"
+                    },
+                ],
+                iframeW: '',
+                iframeH: '',
+                navbarI: '',
+                wrapperI: 0,
+                equityIsShow: false,
+            },
+            created: function () {
+                // 获取浏览器高度
+                iframeW = $(document).width();
+                iframeH = $(document).height() - 44;
+                console.info(iframeH+44)
+                $('iframe').height(iframeH);
+
+            },
+            methods: {
+                tabChange: function (index, item) {
+                    this.wrapperI = index;
+                    let moveL = -iframeW * 1 ;
+                    if (index == 4 ) {
+                        $(".wrapperUl").css("left", moveL + "px")
+                    } else {
+                        $("iframe").attr("src",this.links[index]);
+                        $(".wrapperUl").css("left", "0px")
+                    }
+                    console.info('========', index, item, this.links[index])
+                    _czc.push(['_trackEvent', '广西视频专区', item]);
+
+                },
+                equityChange: function (index, item) {
+                    console.info(item.title)
+                    _czc.push(['_trackEvent', '权益特惠', item.title]);
+                },
+                loadingEng: function () {
+                    this.loadingIsShow = false;
+                },
+                getWH: function () {
+                    iframeW = $(document).width();
+                    iframeH = $(document).height() - 44;
+                    
+                }
+            },
+            mounted: function () {     
+                this.getWH()
+
+            } 
+        })
+	}
+	vueObj ()
+</script>
+</html>
